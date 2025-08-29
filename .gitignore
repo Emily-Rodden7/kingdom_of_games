@@ -9,3 +9,6 @@ __pycache__/
 
 # Ignore VS Code settings folder
 .vscode/
+
+# Ignore the SQLite database file
+*.sqlite3
