@@ -34,6 +34,12 @@
     <title>Kingdom Of Games {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    
+    <header class="container-fluid fixed-top">
+        
+        {% if messages %}
+        <div class="message-container"></div>
+        {% endif %}
+        
+    </header>
   </body>
 </html>
