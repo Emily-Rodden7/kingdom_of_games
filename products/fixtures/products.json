@@ -4,13 +4,13 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001340155",
-            "name": "",
-            "description": "",
-            "price": 53.99,
-            "category": 6,
+            "name": "Catan",
+            "description": "Catan is a strategy board game where players collect and trade resources to build roads, settlements, and cities in a race to reach 10 victory points first.",
+            "price": 39.99,
+            "category": 2,
             "rating": 4.6,
-            "image_url": "",
-            "image": ""
+            "image_url": "https://www.argos.co.uk/product/9498259?utm_custom6=LIA&deeplink=true&gclsrc=aw.ds&&cmpid=GS001&_$ja=tsid:59157|acid:629-618-1342|cid:20368907733|agid:|tid:|crid:|nw:x|rnd:10423407496193482558|dvc:c|adp:|mt:|loc:1007448&utm_source=Google&utm_medium=cpc&utm_campaign=20368907733&utm_term=9498259&utm_content=shopping&utm_custom1=&utm_custom2=629-618-1342&GPDP=true&gad_source=1&gad_campaignid=19671806872&gbraid=0AAAAAD9II9n9Kb8DFBx_YnZfBSDK2vG6G&gclid=CjwKCAjwlaTGBhANEiwAoRgXBYHmPt3YtbJHlSeHaLb6CpYpT_Gq4bULt2QJ2Xe6b3q-6_oN3cdSnhoC7sEQAvD_BwE",
+            "image": "media/catan.jpg"
         }
     }
 
