@@ -1,0 +1,9 @@
+[
+    { "pk": 1, "model": "products.category", "fields": { "name": "card games", "friendly_name": "Card Games" } },
+    { "pk": 2, "model": "products.category", "fields": { "name": "strategy games", "friendly_name": "Strategy Games" } },
+    { "pk": 3, "model": "products.category", "fields": { "name": "children games", "friendly_name": "Children Games" } },
+    { "pk": 4, "model": "products.category", "fields": { "name": "classic games", "friendly_name": "Classic Games" } },
+    { "pk": 5, "model": "products.category", "fields": { "name": "deals", "friendly_name": "Deals" } },
+    { "pk": 6, "model": "products.category", "fields": { "name": "clearance", "friendly_name": "Clearance" } }
+
+]
