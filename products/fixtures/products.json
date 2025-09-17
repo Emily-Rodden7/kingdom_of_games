@@ -3,7 +3,7 @@
         "pk": 1,
         "model": "products.product",
         "fields": {
-            "sku": "pp5001340155",
+            "sku": "pn52020001",
             "name": "Catan",
             "description": "Catan is a strategy board game where players collect and trade resources to build roads, settlements, and cities in a race to reach 10 victory points first.",
             "price": 39.99,
@@ -17,21 +17,7 @@
         "pk": 2,
         "model": "products.product",
         "fields": {
-            "sku": "pp5001340155",
-            "name": "Monopoly",
-            "description": "Monopoly is a classic board game in which players buy, trade, and develop properties to collect rent and bankrupt their opponents, aiming to dominate the market and become the wealthiest player.",
-            "price": 19.99,
-            "category": 4,
-            "rating": 4.4,
-            "image": "monopoly.jpg"
-        }
-    },
-
-        {
-        "pk": 3,
-        "model": "products.product",
-        "fields": {
-            "sku": "pp5001340155",
+            "sku": "pn52020002",
             "name": "P for Pizza",
             "description": "P for Pizza is a fast-paced, family-friendly card game where players race to come up with words that fit a given category and start with a specific letter, all in an effort to build a giant slice of pizza before their opponents.",
             "price": 12.99,
@@ -41,11 +27,11 @@
         }
     },
 
-        {
-        "pk": 4,
+    {
+        "pk": 3,
         "model": "products.product",
         "fields": {
-            "sku": "pp5001340155",
+            "sku": "pn52020003",
             "name": "Carcassonne",
             "description": "Carcassonne is a strategic tile placement board game where players build a medieval landscape by placing tiles featuring cities, roads, fields, and monasteries and score points by deploying followers called meeples to claim and control these features.",
             "price": 31.99,
@@ -55,11 +41,11 @@
         }
     },
 
-        {
-        "pk": 5,
+    {
+        "pk": 4,
         "model": "products.product",
         "fields": {
-            "sku": "pp5001340155",
+            "sku": "pn52020004",
             "name": "Chess",
             "description": "Chess is a classic two-player strategy game where each player commands an army of 16 pieces with the goal of checkmating the opponent's king by placing it under threat of capture with no legal moves left.",
             "price": 7.99,
@@ -69,11 +55,11 @@
         }
     },
 
-        {
-        "pk": 6,
+    {
+        "pk": 5,
         "model": "products.product",
         "fields": {
-            "sku": "pp5001340155",
+            "sku": "pn52020005",
             "name": "Cluedo",
             "description": "Cluedo is a classic mystery board game where players take on the roles of suspects and compete to solve a murder by deducing the correct combination of suspect, weapon, and room through strategic questioning and careful elimination.",
             "price": 19.99,
@@ -83,11 +69,11 @@
         }
     },
 
-        {
-        "pk": 7,
+    {
+        "pk": 6,
         "model": "products.product",
         "fields": {
-            "sku": "pp5001340155",
+            "sku": "pn52020006",
             "name": "Dobble",
             "description": "Dobble is a fast-paced observation and matching game where players race to spot the one symbol that any two cards have in common, testing speed, focus, and reflexes in a series of quick mini-games.",
             "price": 9.99,
@@ -97,11 +83,25 @@
         }
     },
 
-        {
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "pn52020007",
+            "name": "Do or Drink",
+            "description": "Do or Drink is an adult party card game where players draw cards that challenge them to either complete outrageous dares or take a drink, leading to unpredictable, hilarious, and often wild moments as the game progresses.",
+            "price": 15.99,
+            "category": 9,
+            "rating": 3.6,
+            "image": "doordrink.jpg"
+        }
+    },
+
+    {
         "pk": 8,
         "model": "products.product",
         "fields": {
-            "sku": "pp5001340155",
+            "sku": "pn52020008",
             "name": "Exploding Kitten",
             "description": "Exploding Kittens is a fast-paced, strategic card game where players take turns drawing cards while trying to avoid drawing an Exploding Kitten, using action cards to skip turns, defuse explosions, and sabotage opponents in a quirky, unpredictable battle for survival.",
             "price": 16.99,
@@ -111,11 +111,39 @@
         }
     },
 
-        {
+    {
         "pk": 9,
         "model": "products.product",
         "fields": {
-            "sku": "pp5001340155",
+            "sku": "pn52020009",
+            "name": "Exploding Kitten NSFW",
+            "description": "Exploding Kittens NSFW Edition is an adults-only version of the popular card game, featuring the same strategic gameplay of avoiding exploding kitten cards, but with mature and irreverent humor added to the artwork and card text, making it a fun and edgy twist for adult game nights.",
+            "price": 9.99,
+            "category": 7,
+            "rating": 4.1,
+            "image": "explodingkitten-nsfw.jpg"
+        }
+    },
+
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "sku": "pn52020010",
+            "name": "Horrible Therapist",
+            "description": "Horrible Therapist is a darkly humorous adult party game where players create absurd and inappropriate therapy sessions by matching bizarre patient problems with wildly unhelpful treatment responses.",
+            "price": 21.99,
+            "category": 7,
+            "rating": 4.2,
+            "image": "horribletherapist.jpg"
+        }
+    },
+
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "sku": "pn52020011",
             "name": "Hues and Cues",
             "description": "Hues and Cues is a colorful party game where players try to guess specific colors on a large board based on one- or two-word clues given by the cue giver, challenging everyone’s ability to connect language with color perception.",
             "price": 22.99,
@@ -124,11 +152,12 @@
             "image": "huesandcues.jpg"
         }
     },
-            {
-        "pk": 10,
+
+    {
+        "pk": 12,
         "model": "products.product",
         "fields": {
-            "sku": "pp5001340155",
+            "sku": "pn52020012",
             "name": "Hungry Hungry Hippos",
             "description": "Hungry Hungry Hippos is a fast-action children's game where players control plastic hippos to gobble up as many marbles as possible, competing in a frantic race to collect the most before they run out.",
             "price": 15.99,
@@ -138,11 +167,11 @@
         }
     },
 
-                {
-        "pk": 11,
+    {
+        "pk": 13,
         "model": "products.product",
         "fields": {
-            "sku": "pp5001340155",
+            "sku": "pn52020013",
             "name": "Kerplunk",
             "description": "Kerplunk is a suspenseful children's game where players take turns carefully removing sticks from a tube while trying not to let the marbles fall, aiming to have the fewest marbles drop by the end of the game.",
             "price": 14.99,
@@ -152,11 +181,39 @@
         }
     },
 
-                {
-        "pk": 12,
+    {
+        "pk": 14,
         "model": "products.product",
         "fields": {
-            "sku": "pp5001340155",
+            "sku": "pn52020014",
+            "name": "Monopoly",
+            "description": "Monopoly is a classic board game in which players buy, trade, and develop properties to collect rent and bankrupt their opponents, aiming to dominate the market and become the wealthiest player.",
+            "price": 19.99,
+            "category": 4,
+            "rating": 4.4,
+            "image": "monopoly.jpg"
+        }
+    },
+
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "sku": "pn52020015",
+            "name": "Monopoly: Board Crawl",
+            "description": "Monopoly: Board Crawl is an adult party version of Monopoly where players move around the board completing fun, outrageous, and often drink-related challenges at each property, turning the classic game into a fast-paced social experience.",
+            "price": 19.99,
+            "category": 8,
+            "rating": 4.2,
+            "image": "monopolydrinking.jpg"
+        }
+    },
+
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "sku": "pn52020016",
             "name": "Mouse Trap",
             "description": "Mouse Trap is a fun and interactive board game where players work together to build a complex, Rube Goldberg-style contraption piece by piece, then try to trap their opponents’ mice using the elaborate machine while moving around the board.",
             "price": 21.99,
@@ -166,11 +223,25 @@
         }
     },
 
-                {
-        "pk": 13,
+    {
+        "pk": 17,
         "model": "products.product",
         "fields": {
-            "sku": "pp5001340155",
+            "sku": "pn52020017",
+            "name": "Poetry for Neanderthals: NSFW Edition",
+            "description": "Poetry for Neanderthals: NSFW Edition is an adult party word‑guessing game where teams try to get players to guess risqué phrases like “nudist beach” or “mile high club” by giving clues restricted to single‑syllable words; if someone slips up and uses a multi‑syllable word, the opposing team gets to whack them (lightly) with the inflatable “Spank Stick.",
+            "price": 19.99,
+            "category": 7,
+            "rating": 3.9,
+            "image": "poetry-nsfw.jpg"
+        }
+    },
+
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "sku": "pn52020018",
             "name": "Sorry",
             "description": "Sorry! is a classic board game where players race their four pawns around the board, trying to get all of them home while using special cards to move, swap places, or send opponents’ pawns back to start, adding an element of luck and strategy to the race.",
             "price": 11.95,
@@ -180,11 +251,25 @@
         }
     },
 
-                {
-        "pk": 14,
+    {
+        "pk": 19,
         "model": "products.product",
         "fields": {
-            "sku": "pp5001340155",
+            "sku": "pn52020019",
+            "name": "Tipsyland Board Game",
+            "description": "Tipsyland is an adult‐party drinking board game where players roll dice and move around a splash‑resistant board filled with 75‑90 different spaces that prompt dares, confessions, mini‑competitions, “Pick Someone Who,” “Never Have I Ever,” and of course drinks, all designed to spark laughter and make any gathering more wild.",
+            "price": 29.99,
+            "category": 8,
+            "rating": 4.3,
+            "image": "tipsyland.jpg"
+        }
+    },
+
+    {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "sku": "ppn52020020",
             "name": "Yahtzee",
             "description": "Yahtzee is a classic dice game where players roll five dice to make specific combinations, such as three-of-a-kind or a full house, aiming to score the highest total points over thirteen rounds through strategy and luck.",
             "price": 10.99,
