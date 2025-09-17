@@ -11,6 +11,19 @@
             "rating": 4.6,
             "image": "catan.jpg"
         }
-    }
+    },
 
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Monopoly",
+            "description": "Monopoly is a classic board game in which players buy, trade, and develop properties to collect rent and bankrupt their opponents, aiming to dominate the market and become the wealthiest player.",
+            "price": 19.99,
+            "category": 4,
+            "rating": 4.4,
+            "image": "monopoly.jpg"
+        }
+    }
 ]
