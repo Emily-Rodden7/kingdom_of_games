@@ -25,5 +25,172 @@
             "rating": 4.4,
             "image": "monopoly.jpg"
         }
+    },
+
+        {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "P for Pizza",
+            "description": "P for Pizza is a fast-paced, family-friendly card game where players race to come up with words that fit a given category and start with a specific letter, all in an effort to build a giant slice of pizza before their opponents.",
+            "price": 12.99,
+            "category": 1,
+            "rating": 4.2,
+            "image": "bigpotato-pforpizza.jpg"
+        }
+    },
+
+        {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Carcassonne",
+            "description": "Carcassonne is a strategic tile placement board game where players build a medieval landscape by placing tiles featuring cities, roads, fields, and monasteries and score points by deploying followers called meeples to claim and control these features.",
+            "price": 31.99,
+            "category": 2,
+            "rating": 4,
+            "image": "carcassonne.jpg"
+        }
+    },
+
+        {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Chess",
+            "description": "Chess is a classic two-player strategy game where each player commands an army of 16 pieces with the goal of checkmating the opponent's king by placing it under threat of capture with no legal moves left.",
+            "price": 7.99,
+            "category": 2,
+            "rating": 3.8,
+            "image": "chess.jpg"
+        }
+    },
+
+        {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Cluedo",
+            "description": "Cluedo is a classic mystery board game where players take on the roles of suspects and compete to solve a murder by deducing the correct combination of suspect, weapon, and room through strategic questioning and careful elimination.",
+            "price": 19.99,
+            "category": 4,
+            "rating": 4.3,
+            "image": "cluedo.jpg"
+        }
+    },
+
+        {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Dobble",
+            "description": "Dobble is a fast-paced observation and matching game where players race to spot the one symbol that any two cards have in common, testing speed, focus, and reflexes in a series of quick mini-games.",
+            "price": 9.99,
+            "category": 1,
+            "rating": 3.8,
+            "image": "dobble.jpg"
+        }
+    },
+
+        {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Exploding Kitten",
+            "description": "Exploding Kittens is a fast-paced, strategic card game where players take turns drawing cards while trying to avoid drawing an Exploding Kitten, using action cards to skip turns, defuse explosions, and sabotage opponents in a quirky, unpredictable battle for survival.",
+            "price": 16.99,
+            "category": 1,
+            "rating": 4.4,
+            "image": "explodingkitten.jpg"
+        }
+    },
+
+        {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Hues and Cues",
+            "description": "Hues and Cues is a colorful party game where players try to guess specific colors on a large board based on one- or two-word clues given by the cue giver, challenging everyone’s ability to connect language with color perception.",
+            "price": 22.99,
+            "category": 4,
+            "rating": 3.7,
+            "image": "huesandcues.jpg"
+        }
+    },
+            {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Hungry Hungry Hippos",
+            "description": "Hungry Hungry Hippos is a fast-action children's game where players control plastic hippos to gobble up as many marbles as possible, competing in a frantic race to collect the most before they run out.",
+            "price": 15.99,
+            "category": 3,
+            "rating": 3.7,
+            "image": "hungryhippos.jpg"
+        }
+    },
+
+                {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Kerplunk",
+            "description": "Kerplunk is a suspenseful children's game where players take turns carefully removing sticks from a tube while trying not to let the marbles fall, aiming to have the fewest marbles drop by the end of the game.",
+            "price": 14.99,
+            "category": 3,
+            "rating": 4.1,
+            "image": "kerplunk.jpg"
+        }
+    },
+
+                {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Mouse Trap",
+            "description": "Mouse Trap is a fun and interactive board game where players work together to build a complex, Rube Goldberg-style contraption piece by piece, then try to trap their opponents’ mice using the elaborate machine while moving around the board.",
+            "price": 21.99,
+            "category": 3,
+            "rating": 4.0,
+            "image": "mousetrap.jpg"
+        }
+    },
+
+                {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Sorry",
+            "description": "Sorry! is a classic board game where players race their four pawns around the board, trying to get all of them home while using special cards to move, swap places, or send opponents’ pawns back to start, adding an element of luck and strategy to the race.",
+            "price": 11.95,
+            "category": 3,
+            "rating": 4.5,
+            "image": "sorry.jpg"
+        }
+    },
+
+                {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Yahtzee",
+            "description": "Yahtzee is a classic dice game where players roll five dice to make specific combinations, such as three-of-a-kind or a full house, aiming to score the highest total points over thirteen rounds through strategy and luck.",
+            "price": 10.99,
+            "category": 1,
+            "rating": 4.7,
+            "image": "yahtzee.jpg"
+        }
     }
 ]
