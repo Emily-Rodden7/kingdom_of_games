@@ -1,0 +1,1 @@
+web: gunicorn kingdom_of_games.wsgi:application
