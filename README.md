@@ -247,7 +247,13 @@ Using [Django’s admin panel](https://kingdom-of-games-f3145b6a77c9.herokuapp.c
 
 - [Taco](https://www.amazon.co.uk/Blue-Orange-BLUTACO-Cheese-Colours/dp/B088HRRB59/ref=asc_df_B088HRRB59?mcid=0d74f0eaa23c355bb0c00de73d557d02&th=1&tag=googshopuk-21&linkCode=df0&hvadid=696350735931&hvpos=&hvnetw=g&hvrand=3127525745372442187&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007448&hvtargid=pla-917513888559&hvocijid=3127525745372442187-B088HRRB59-&hvexpln=0&gad_source=1)
 
--[UNO](amazon.co.uk/UNO-W2087-Card-Game-European/dp/B005I5M2F8/ref=asc_df_B005I5M2F8?mcid=af7deb2899a632fcb69d0615767503c0&tag=googshopuk-21&linkCode=df0&hvadid=696350735931&hvpos=&hvnetw=g&hvrand=3127525745372442187&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007448&hvtargid=pla-385946056070&psc=1&hvocijid=3127525745372442187-B005I5M2F8-&hvexpln=0&gad_source=1)
+- [UNO](amazon.co.uk/UNO-W2087-Card-Game-European/dp/B005I5M2F8/ref=asc_df_B005I5M2F8?mcid=af7deb2899a632fcb69d0615767503c0&tag=googshopuk-21&linkCode=df0&hvadid=696350735931&hvpos=&hvnetw=g&hvrand=3127525745372442187&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007448&hvtargid=pla-385946056070&psc=1&hvocijid=3127525745372442187-B005I5M2F8-&hvexpln=0&gad_source=1)
+
+- [hedbanz](https://www.amazon.co.uk/Spin-Master-Games-Hedbanz-Game/dp/B003AIM52A/ref=asc_df_B003AIM52A?mcid=9d4c7b066a97384db13c5b845c0c0426&tag=googshopuk-21&linkCode=df0&hvadid=697316272301&hvpos=&hvnetw=g&hvrand=3127525745372442187&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007448&hvtargid=pla-420700901251&hvocijid=3127525745372442187-B003AIM52A-&hvexpln=0&gad_source=1&th=1)
+
+- [operation](https://www.amazon.co.uk/Hasbro-Gaming-Classic-Operation-Game/dp/B01J3KRZRS/ref=asc_df_B01J3KRZRS?mcid=fbfd022a8f973d09a1b2bc5985ea4132&th=1&psc=1&tag=googshopuk-21&linkCode=df0&hvadid=696350735931&hvpos=&hvnetw=g&hvrand=13565994558038334510&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007448&hvtargid=pla-426288045555&psc=1&hvocijid=13565994558038334510-B01J3KRZRS-&hvexpln=0&gad_source=1)
+
+- [battleship](https://www.argos.co.uk/product/9614686?utm_custom6=LIA&deeplink=true&gclsrc=aw.ds&&cmpid=GS001&_$ja=tsid:59130|acid:289-152-2757|cid:599609992|agid:24126986217|tid:pla-1079432869632|crid:94168542777|nw:g|rnd:5904851900067667145|dvc:c|adp:|mt:|loc:1007448&utm_source=Google&utm_medium=cpc&utm_campaign=599609992&utm_term=&utm_content=shopping&utm_custom1=24126986217&utm_custom2=289-152-2757&GPDP=true&gad_source=1&gad_campaignid=599609992&gbraid=0AAAAAD9II9nwZgKxpTqC-p5KWRqk41VmO&gclid=CjwKCAjwisnGBhAXEiwA0zEOR_7v7MPslnGRsUFu1Wp9usVD-pgBYCMO_mbXraAuFGl4XTeL4T9mhBoC4sQQAvD_BwE)
 
 
 ## Acknowledgements
