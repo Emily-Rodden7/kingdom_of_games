@@ -2,6 +2,8 @@
 
 Link to deployed site: [kingdomofgames](https://kingdom-of-games-f3145b6a77c9.herokuapp.com/)
 
+[Go to TESTING.md file to see screenshots](TESTING.md)
+
 Welcome to Kingdom Of Games, an e-commerce website offering a vast collection of board games for every kind of player, from children’s classics and family-friendly fun to adults-only party games, including drinking and NSFW options.
 
 This site was built to create a vibrant, easy-to-navigate digital storefront where users can discover, browse, and purchase the best board games in one place. Whether you're shopping for a quiet game night with the kids, a competitive family evening, or a wild party game for adults; Kingdom Of Games has you covered.
@@ -124,6 +126,8 @@ Admin Panel: Allows site owner to manage products, users, and orders.
 
 ## Testing
 
+[Go to TESTING.md file to see screenshots](TESTING.md)
+
 Testing included:
 
 - Manual testing of forms, filtering, cart logic, and user accounts
@@ -233,7 +237,7 @@ Using [Django’s admin panel](https://kingdom-of-games-f3145b6a77c9.herokuapp.c
 
 - [do or drink](https://www.therange.co.uk/toys/puzzles-board-and-card-games/card-games/do-or-drink-win-or-blackout-edition?utm_source=google&utm_medium=cpc&utm_campaign=22765680476-&utm_content=-&utm_term=&gad_source=1&gad_campaignid=22759609827&gbraid=0AAAAADFuktyrj955sRXQmwn-JlZEvIShJ&gclid=Cj0KCQjwuKnGBhD5ARIsAD19RsbX2ioEqq9ISX3Tjg_lxOO8yXFLQhwVOG_WpdGHYcrJObmcZ963tcYaAplREALw_wcB#380874)
 
--[monopoly drinking game](https://www.amazon.co.uk/Monopoly-G1298-Board-Crawl/dp/B0D2JK8QFL/ref=asc_df_B0D2JK8QFL?mcid=5bb69fd0645d3d07858f6558e4087477&th=1&psc=1&tag=googshopuk-21&linkCode=df0&hvadid=712027622340&hvpos=&hvnetw=g&hvrand=18407623419091235866&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007448&hvtargid=pla-2370303190760&psc=1&hvocijid=18407623419091235866-B0D2JK8QFL-&hvexpln=0&gad_source=1)
+- [monopoly drinking game](https://www.amazon.co.uk/Monopoly-G1298-Board-Crawl/dp/B0D2JK8QFL/ref=asc_df_B0D2JK8QFL?mcid=5bb69fd0645d3d07858f6558e4087477&th=1&psc=1&tag=googshopuk-21&linkCode=df0&hvadid=712027622340&hvpos=&hvnetw=g&hvrand=18407623419091235866&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007448&hvtargid=pla-2370303190760&psc=1&hvocijid=18407623419091235866-B0D2JK8QFL-&hvexpln=0&gad_source=1)
 
 - [tispy land](https://www.menkind.co.uk/tipsy-land-board-game?gad_source=1&gad_campaignid=23031961126&gbraid=0AAAAAD45wmHsY-9JvpBtMlNtfPke-YcyM&gclid=Cj0KCQjwuKnGBhD5ARIsAD19Rsbdg3Wbe_IuKoE7ID5f-EulyZL81F5TghKRwiICx2pz6cdE5XFSdtoaAhvNEALw_wcB)
 
