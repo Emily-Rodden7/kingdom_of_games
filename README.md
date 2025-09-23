@@ -90,6 +90,8 @@ Admin Panel: Allows site owner to manage products, users, and orders.
 
 - Edit account details
 
+- Button to take user back to the top of the page
+
 ## Future Features
 
 - Game rental service (limited-time play)
