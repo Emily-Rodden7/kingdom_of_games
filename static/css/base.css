@@ -15,7 +15,11 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 80vh;
-  width: 100vw; 
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative; 
+  left: 50%;
+  right: 50%;
 }
 
 /* from Bulma */
@@ -29,6 +33,7 @@ body {
 
 .logo-font {
     text-transform: uppercase;
+    color: #2952d7;
 }
 
 .main-logo-link {
@@ -37,14 +42,14 @@ body {
 
 .shop-now-button {
     background: #D4AF37;
-    color: #1E40AF;
+    color: #2952d7;
     min-width: 260px;
     font-weight: 700;
 }
 
 .btn-black {
     background: #D4AF37;
-    color: #1E40AF;
+    color: #2952d7;
 }
 
 .btn-outline-black {
@@ -200,7 +205,7 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content input {
-    border-color: #000;
+    border-color: #1E40AF;
     border-radius: 0;
 }
 
@@ -217,7 +222,7 @@ input[name='q']::placeholder {
 	/* btn */
 	display: inline-block;
     font-weight: 400;
-    color: #fff;
+    color: #1E40AF;
     text-align: center;
     vertical-align: middle;
     -webkit-user-select: none;
@@ -237,9 +242,9 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
-	color: #fff;
-    background-color: #222;
-    border-color: #222;
+	color: #1E40AF;
+    background-color: #D4AF37;
+    border-color: #D4AF37;
 }
 
 .allauth-form-inner-content a {
