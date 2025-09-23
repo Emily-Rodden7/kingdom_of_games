@@ -27,26 +27,26 @@ body {
 }
 
 .shop-now-button {
-    background: black;
-    color: white;
+    background: #D4AF37;
+    color: #1E40AF;
     min-width: 260px;
 }
 
 .btn-black {
-    background: black;
-    color: white;
+    background: #D4AF37;
+    color: #1E40A;
 }
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
+    color: #D4AF37!important; /* use important to override link colors for <a> elements */
+    border: 1px solid #D4AF37;
 }
 
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
+    background: #695619;
     color: white !important;
 }
 
@@ -56,7 +56,7 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: #695619;
     color: white;
 }
 
@@ -214,8 +214,8 @@ input[name='q']::placeholder {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #000;
-    border: 1px solid #000;
+    background-color: #069124;
+    border: 1px solid #069124;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
