@@ -243,6 +243,12 @@ Using [Django’s admin panel](https://kingdom-of-games-f3145b6a77c9.herokuapp.c
 
 - [poetry nsfw](https://www.explodingkittens.com/products/poetry-for-neanderthals-nsfw-edition)
 
+- [ticket to ride](https://www.amazon.co.uk/Days-Wonder-7201-Ticket-Ride/dp/0975277324)
+
+- [Taco](https://www.amazon.co.uk/Blue-Orange-BLUTACO-Cheese-Colours/dp/B088HRRB59/ref=asc_df_B088HRRB59?mcid=0d74f0eaa23c355bb0c00de73d557d02&th=1&tag=googshopuk-21&linkCode=df0&hvadid=696350735931&hvpos=&hvnetw=g&hvrand=3127525745372442187&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007448&hvtargid=pla-917513888559&hvocijid=3127525745372442187-B088HRRB59-&hvexpln=0&gad_source=1)
+
+-[UNO](amazon.co.uk/UNO-W2087-Card-Game-European/dp/B005I5M2F8/ref=asc_df_B005I5M2F8?mcid=af7deb2899a632fcb69d0615767503c0&tag=googshopuk-21&linkCode=df0&hvadid=696350735931&hvpos=&hvnetw=g&hvrand=3127525745372442187&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007448&hvtargid=pla-385946056070&psc=1&hvocijid=3127525745372442187-B005I5M2F8-&hvexpln=0&gad_source=1)
+
 
 ## Acknowledgements
 
