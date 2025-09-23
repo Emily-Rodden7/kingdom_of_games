@@ -182,7 +182,7 @@ Deployed on [Heroku](https://www.heroku.com/) using the following:
 
 ## Admin Backend
 
-Using Django’s admin panel, the superuser can:
+Using [Django’s admin panel](https://kingdom-of-games-f3145b6a77c9.herokuapp.com/admin/login/?next=/admin/), the superuser can:
 
 - Add/edit/delete products
 
