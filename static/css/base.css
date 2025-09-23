@@ -25,11 +25,13 @@ body {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+    color: #2952d7;
 }
 
 .logo-font {
     text-transform: uppercase;
     color: #2952d7;
+    font-weight: 700;
 }
 
 .main-logo-link {
