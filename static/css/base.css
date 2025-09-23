@@ -10,7 +10,7 @@ body {
 }
 
 .hero-background {
-  background-image: url('/media/homepage-gamenight.png'); 
+  background-image: url('/media/hero-image.jpg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
