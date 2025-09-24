@@ -2,7 +2,7 @@
 
 Link to deployed site: [kingdomofgames](https://kingdom-of-games-f3145b6a77c9.herokuapp.com/)
 
-[Go to TESTING.md file to see screenshots](TESTING.md)
+[Go to TESTING.md file to see testing and screenshots](TESTING.md)
 
 Welcome to Kingdom Of Games, an e-commerce website offering a vast collection of board games for every kind of player, from children’s classics and family-friendly fun to adults-only party games, including drinking and NSFW options.
 
@@ -66,19 +66,25 @@ Admin Backend
 
 Screenshots of the finished pages.
 
-Home: Showcases top categories and featured games.
+![Home](testing-screenshots/homepage.png)
 
-Browse Games: View all games or filter by type (e.g., Kids, Family, 18+).
+![Products](testing-screenshots/productspage.jpg)
 
-Game Detail Page: Shows all relevant info, pricing, age restrictions, and reviews.
+![product detail](testing-screenshots/product-detailspage.jpg)
 
-Sign Up / Login: Secure user authentication.
+![Product mamagement](testing-screenshots/productmanagementpage.jpg)
 
-User Dashboard: View orders, manage wishlist, update profile.
+![Sign in](testing-screenshots/signinpage.jpg)
 
-Shopping Cart & Checkout: Integrated e-commerce flow.
+![Sign up](testing-screenshots/signuppage.jpg)
 
-Admin Panel: Allows site owner to manage products, users, and orders.
+![My profile](testing-screenshots/myprofile.jpg)
+
+![Shopping bag](testing-screenshots/shoppingbagpage.jpg)
+
+![checkout](testing-screenshots/checkoutpage.jpg)
+
+![Django admin](testing-screenshots/djangoadmin.jpg)
 
 ### User Features
 
