@@ -82,6 +82,8 @@ Screenshots of the finished pages.
 
 ![checkout](testing-screenshots/checkoutpage.jpg)
 
+![Ordered](testing-screenshots/orderpage.jpg)
+
 ![Django admin](testing-screenshots/djangoadmin.jpg)
 
 ### User Features
