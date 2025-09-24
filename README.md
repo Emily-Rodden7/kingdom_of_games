@@ -40,25 +40,23 @@ Accent Color: Gold – representing premium quality and excitement.
 - I want to add games to a cart and checkout securely,
 - So I can buy games conveniently from home.
 
-6. Leave and Read Game Reviews: As a user,
-- I want to read and write reviews,
-- So I can learn from others and share my experiences.
+6. Checkout and Payment: As a user,
+- I want to securely enter payment and shipping details,
+- So that I can complete my purchase quickly and safely.
 
 ## Wireframes
 
-Home Page
+![Home](testing-screenshots/homepage-wireframe.jpg)
 
-Game Category Page
+![Products](testing-screenshots/productspage-wireframe.jpg)
 
-Individual Game Page
+![Sign up/ sign in](testing-screenshots/signin-signup-wireframe.jpg)
 
-Login & Sign Up
+![My profile](testing-screenshots/myprofile-wireframe.jpg)
 
-User Dashboard
+![Product Management](testing-screenshots/productmanagementpage-wireframe.jpg)
 
-Cart & Checkout
-
-Admin Backend
+![Shopping bag](testing-screenshots/shoppingbagpage-wireframe.jpg)
 
 ## Features
 
@@ -100,6 +98,8 @@ Screenshots of the finished pages.
 
 - Button to take user back to the top of the page
 
+- Search bar to search for specific products
+
 ## Future Features
 
 - Game rental service (limited-time play)
@@ -140,11 +140,11 @@ Testing included:
 
 - Mobile responsiveness on iOS and Android
 
-- Compatibility with Chrome, Safari, Firefox
+- Compatibility with Chrome and Microsoft Edge
 
 - Form validation and field error handling
 
-- Admin permissions and product editing
+- Admin permissions and product editing. I have added in extra security so without the admin password user can't accidently or try and edit information on the site. They would need the key/ password.
 
 ## Deployment
 
@@ -200,7 +200,7 @@ Using [Django’s admin panel](https://kingdom-of-games-f3145b6a77c9.herokuapp.c
 
 - Process or cancel orders
 
-- Manage subscribers, add, edit or delete
+- Manage users: add, edit or delete
 
 ## Media & Assets
 
