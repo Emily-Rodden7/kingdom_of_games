@@ -46,8 +46,6 @@ I've tested my deployed project on different screen sizes. I have also tried on 
 
 | Type | Screenshot | Notes |
 | ---- | ---------- | ----- |
-| Samsung Galaxy s8 | ![samsung](TESTING-screenshots/samsung-galaxys8.png) | Loaded as expected |
-| Pixel7 | ![pixel](TESTING-screenshots/pixel7.png) | Too much whitespace |
-| IPad Air | ![ipad](TESTING-screenshots/ipadair.png) | Loaded as expected |
-| IPhone 14 Pro Max | ![iphone14](TESTING-screenshots/iphone14promax.png) | Loaded as expected |
-| IPhone se | ![iphonese](TESTING-screenshots/iphonese.png) | Loaded as expected |
+| Samsung Galaxy s8 | ![samsung](testing-screenshots/samsung-galaxy-s8.jpg) | Loaded as expected |
+| Pixel7 | ![pixel](testing-screenshots/pixel7.jpg) | Loaded as expected |
+| IPhone se | ![iphonese](testing-screenshots/iphone-se.jpg) | Loaded as expected |
