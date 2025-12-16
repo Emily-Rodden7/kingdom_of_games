@@ -112,6 +112,13 @@
                             <strong>{{ review.user.username }}</strong> -
                             <small>{{ review.created_on|date:"F j, Y, g:i a" }}</small>
                             <p>{{ review.comment }}</p>
+
+                            {% if review.user == user %}
+                                <form action="{% url 'delete_review' review.id %}" method="post" style="display:inline;">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                </form>
+                            {% endif %}
                         </div>
                     {% empty %}
                         <p>No reviews yet. Be the first to review this product!</p>

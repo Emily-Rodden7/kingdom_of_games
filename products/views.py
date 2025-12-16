@@ -91,6 +91,19 @@ def add_review(request, product_id):
     return redirect('product_detail', product_id=product.id)
 
 @login_required
+def delete_review(request, review_id):
+    review = get_object_or_404(Review, pk=review_id)
+
+    # Check if the logged-in user owns this review
+    if review.user != request.user:
+        messages.error(request, "You can only delete your own reviews.")
+        return redirect('product_detail', product_id=review.product.id)
+
+    review.delete()
+    messages.success(request, "Your review has been deleted.")
+    return redirect('product_detail', product_id=review.product.id)
+
+@login_required
 def add_product(request):
     """ Add a product to the store """
     if not request.user.is_superuser:
