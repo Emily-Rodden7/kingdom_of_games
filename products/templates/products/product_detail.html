@@ -111,6 +111,7 @@
                         <div class="review mb-3 p-2 border rounded">
                             <strong>{{ review.user.username }}</strong> -
                             <small>{{ review.created_on|date:"F j, Y, g:i a" }}</small>
+                            <p>Rating: {{ review.rating }}/5</p>
                             <p>{{ review.comment }}</p>
 
                             {% if review.user == user %}
