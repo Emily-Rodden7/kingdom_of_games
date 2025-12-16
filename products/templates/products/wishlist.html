@@ -1,31 +1,41 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Your Wishlist</h2>
+<div class="container" style="margin-top:250px">
+    <h2 class="text-center mb-4">Your Wishlist</h2>
 
-{% if wishlist_items %}
-    <ul class="list-group">
-        {% for item in wishlist_items %}
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <!-- Product info with link to product detail page -->
-                <div>
-                    <a href="{% url 'product_detail' item.product.id %}">
-                        {{ item.product.name }}
-                    </a>
-                    <!-- show price -->
-                    <span class="text-muted"> - ${{ item.product.price }}</span>
+    {% if wishlist_items %}
+        <div class="row justify-content-center">
+            {% for item in wishlist_items %}
+                <div class="col-md-8 mb-3">
+                    <div class="card">
+                        <div class="row g-0 align-items-center">
+                            {% if item.product.image %}
+                                <div class="col-md-3 text-center">
+                                    <img src="{{ item.product.image.url }}" class="img-fluid p-2" alt="{{ item.product.name }}">
+                                </div>
+                            {% endif %}
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ item.product.name }}</h5>
+                                    <p class="card-text">{{ item.product.description|truncatewords:20 }}</p>
+                                    <p class="card-text"><strong>${{ item.product.price }}</strong></p>
+                                </div>
+                            </div>
+                            <div class="col-md-2 text-center">
+                                <form method="POST" action="{% url 'remove_from_wishlist' item.id %}">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-danger btn-sm mb-2">Remove</button>
+                                </form>
+                                <a href="{% url 'product_detail' item.product.id %}" class="btn btn-primary btn-sm">View</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Remove from wishlist button -->
-                <form method="POST" action="{% url 'remove_from_wishlist' item.id %}">
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-danger btn-sm">Remove</button>
-                </form>
-            </li>
-        {% endfor %}
-    </ul>
-{% else %}
-    <p>You have no items in your wishlist yet.</p>
-{% endif %}
-
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="text-center">You have no items in your wishlist yet.</p>
+    {% endif %}
+</div>
 {% endblock %}
