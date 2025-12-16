@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category, Review
+from .models import Product, Category, Review, Wishlist
 from .forms import ProductForm, ReviewForm
 
 def all_products(request):
@@ -167,3 +167,38 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+@login_required
+def add_to_wishlist(request, product_id):
+    """Add a product to the user's wishlist"""
+    product = get_object_or_404(Product, pk=product_id)
+
+    # Check if the product is already in the wishlist
+    wishlist_item, created = Wishlist.objects.get_or_create(
+        user=request.user,
+        product=product
+    )
+    
+    if not created:
+        # Product already in wishlist
+        messages.info(request, f"{product.name} is already in your wishlist.")
+    else:
+        messages.success(request, f"{product.name} has been added to your wishlist.")
+    
+    # Redirect back to the same product page
+    return redirect('product_detail', product_id=product.id)
+
+@login_required
+def view_wishlist(request):
+    wishlist_items = Wishlist.objects.filter(user=request.user)
+    context = {
+        'wishlist_items': wishlist_items,
+    }
+    return render(request, 'products/wishlist.html', context)
+
+@login_required
+def remove_from_wishlist(request, item_id):
+    """Remove a product from the user's wishlist"""
+    wishlist_item = get_object_or_404(Wishlist, id=item_id, user=request.user)
+    wishlist_item.delete()
+    return redirect('view_wishlist')

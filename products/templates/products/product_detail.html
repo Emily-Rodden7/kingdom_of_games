@@ -89,6 +89,20 @@
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>
+                <!-- Add to wishlist -->
+                {% if user.is_authenticated %}
+                <form method="POST" action="{% url 'add_to_wishlist' product.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-outline-secondary mt-2">
+                        ❤️ Add to Wishlist 
+                    </button>
+                </form>
+                {% else %}
+                <p class="mt-2">
+                    <a href="{% url 'account_login' %}">Log in</a> to add to your wishlist
+                </p>
+                {% endif %}
+
                 <!-- Review form start -->
                 <div class="reviews-container mt-5">
                     <h4>Leave a Review</h4>
