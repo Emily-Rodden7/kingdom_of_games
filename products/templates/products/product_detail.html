@@ -89,6 +89,35 @@
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>
+                <!-- Review form start -->
+                <div class="reviews-container mt-5">
+                    <h4>Leave a Review</h4>
+
+                    {% if user.is_authenticated %}
+                        <form action="{% url 'add_review' product.id %}" method="POST">
+                            {% csrf_token %}
+                            {{ review_form.as_p }}
+                            <button type="submit" class="btn btn-primary mt-2">Submit Review</button>
+                        </form>
+                    {% else %}
+                        <p><a href="{% url 'account_login' %}">Log in</a> to leave a review.</p>
+                    {% endif %}
+                </div>
+
+                <!-- Existing reviews -->
+                <div class="existing-reviews mt-4">
+                    <h5>Reviews:</h5>
+                    {% for review in product.reviews.all %}
+                        <div class="review mb-3 p-2 border rounded">
+                            <strong>{{ review.user.username }}</strong> -
+                            <small>{{ review.created_on|date:"F j, Y, g:i a" }}</small>
+                            <p>{{ review.comment }}</p>
+                        </div>
+                    {% empty %}
+                        <p>No reviews yet. Be the first to review this product!</p>
+                    {% endfor %}
+                </div>
+                <!-- Review form end -->
             </div>
         </div>
     </div>
