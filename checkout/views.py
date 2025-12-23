@@ -5,7 +5,7 @@ from django.conf import settings
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
-from products.models import Product
+from products.models import Product, GiftCard
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
 from bag.contexts import bag_contents
@@ -162,6 +162,20 @@ def checkout_success(request, order_number):
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
+
+    # Redeem gift card
+    gift_card_code = request.session.get('gift_card_code')
+    if gift_card_code:
+        try:
+            gift_card = GiftCard.objects.get(code=gift_card_code)
+            gift_card.is_redeemed = True
+            gift_card.redeemed_by = request.user  # Track user
+            gift_card.save()
+            # Remove gift card info from session
+            del request.session['gift_card_code']
+            del request.session['gift_card_amount']
+        except GiftCard.DoesNotExist:
+            pass
 
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \

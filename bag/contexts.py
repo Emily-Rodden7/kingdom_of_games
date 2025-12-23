@@ -1,8 +1,7 @@
 from decimal import Decimal
-from django.conf import settings
 from django.shortcuts import get_object_or_404
+from django.conf import settings
 from products.models import Product
-
 
 def bag_contents(request):
     bag_items = []
@@ -43,7 +42,13 @@ def bag_contents(request):
         delivery = Decimal('0.00')
         free_delivery_delta = Decimal('0.00')
 
-    grand_total = discounted_total + delivery
+    # Gift Card
+    gift_card_amount = Decimal(request.session.get('gift_card_amount', 0))
+
+    # Grand total including delivery and subtracting gift card
+    grand_total = discounted_total + delivery - gift_card_amount
+    if grand_total < 0:
+        grand_total = Decimal('0.00')  # prevent negative totals
 
     context = {
         'bag_items': bag_items,
@@ -57,6 +62,7 @@ def bag_contents(request):
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
+        'gift_card_amount': gift_card_amount,
     }
 
     return context

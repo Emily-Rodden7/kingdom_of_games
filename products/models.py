@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from django.contrib.auth.models import User
 
 class Category(models.Model):
     name = models.CharField(max_length=254)
@@ -13,7 +14,6 @@ class Category(models.Model):
 
     def get_friendly_name(self):
         return self.friendly_name
-
 
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
@@ -57,3 +57,12 @@ class Wishlist(models.Model):
     def __str__(self):
         return f'{self.user.username} - {self.product.name}'
 
+class GiftCard(models.Model):
+    code = models.CharField(max_length=16, unique=True)
+    value = models.DecimalField(max_digits=6, decimal_places=2)
+    is_used = models.BooleanField(default=False)
+    issued_to = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+    issued_on = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.code} - £{self.value}"

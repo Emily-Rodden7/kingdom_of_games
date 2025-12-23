@@ -2,11 +2,37 @@ from django.shortcuts import render, redirect, reverse, HttpResponse, get_object
 from django.contrib import messages
 from products.models import Product
 from products.models import Wishlist
+from products.models import GiftCard
+from django.contrib.auth.decorators import login_required
+from bag.contexts import bag_contents
+from decimal import Decimal
 
 def view_bag(request):
     """ A view that renders the bag contents page """
 
-    return render(request, 'bag/bag.html')
+    # Get all the bag totals, discounts, delivery, etc
+    bag_data = bag_contents(request)
+
+    # Get gift card amount from session (default to 0 if none applied)
+    gift_card_amount = Decimal(request.session.get('gift_card_amount', '0'))
+
+    # Calculate new grand total
+    grand_total = bag_data['grand_total'] - gift_card_amount
+    if grand_total < 0:  # Prevent negative totals
+        grand_total = Decimal('0.00')
+
+    context = {
+        'bag_items': bag_data['bag_items'],
+        'total': bag_data['total'],
+        'product_count': bag_data['product_count'],
+        'discount': bag_data['discount'],
+        'delivery': bag_data['delivery'],
+        'free_delivery_delta': bag_data['free_delivery_delta'],
+        'grand_total': grand_total,
+        'gift_card_amount': gift_card_amount,  # Pass gift card to template
+    }
+
+    return render(request, 'bag/bag.html', context)
 
 def add_to_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
@@ -93,3 +119,17 @@ def add_wishlist_to_bag(request, item_id):
 
     # Stay on wishlist page
     return redirect('view_wishlist')
+
+@login_required
+def apply_gift_card(request):
+    if request.method == 'POST':
+        code = request.POST.get('gift_card_code')
+        try:
+            gift_card = GiftCard.objects.get(code=code, is_used=False)
+            request.session['gift_card_amount'] = str(gift_card.value)
+            request.session['gift_card_code'] = gift_card.code
+            messages.success(request, f"Gift Card '{code}' applied: £{gift_card.value} off!")
+        except GiftCard.DoesNotExist:
+            messages.error(request, "Invalid or already used Gift Card.")
+
+    return redirect('view_bag')
