@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
+from decimal import Decimal
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
@@ -12,6 +13,7 @@ from bag.contexts import bag_contents
 
 import stripe
 import json
+
 
 @require_POST
 def cache_checkout_data(request):
@@ -95,7 +97,35 @@ def checkout(request):
 
         current_bag = bag_contents(request)
         total = current_bag['grand_total']
-        stripe_total = round(total * 100)
+
+        # Get gift card info from session
+        gift_card_code = request.session.get('gift_card_code', None)
+        gift_card_amount = Decimal(request.session.get('gift_card_amount', 0))
+
+        # Extract the discount separately
+        discount = current_bag.get('discount', Decimal('0.00'))
+        delivery = current_bag.get('delivery', Decimal('0.00'))
+
+        # Start from total **before discount**
+        order_total = total + discount
+
+        # Subtract discount
+        if discount:
+            order_total -= discount
+
+        # Subtract gift card
+        if gift_card_amount:
+            order_total -= gift_card_amount
+
+        # Add delivery
+        grand_total = order_total + delivery
+
+        # Ensure grand total is never negative
+        if grand_total < 0:
+            grand_total = Decimal('0.00')
+
+
+        stripe_total = round(grand_total * 100)
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
             amount=stripe_total,
@@ -130,7 +160,15 @@ def checkout(request):
             'order_form': order_form,
             'stripe_public_key': stripe_public_key,
             'client_secret': intent.client_secret,
+            'gift_card_code': gift_card_code,
+            'gift_card_amount': gift_card_amount,
+            'discount': discount,
+            'delivery': delivery,
+            'grand_total': grand_total,
+            'total': total,
+            'bag_items': current_bag['bag_items'],
         }
+
 
         return render(request, template, context)
 
@@ -171,9 +209,9 @@ def checkout_success(request, order_number):
             gift_card.is_redeemed = True
             gift_card.redeemed_by = request.user  # Track user
             gift_card.save()
-            # Remove gift card info from session
-            del request.session['gift_card_code']
-            del request.session['gift_card_amount']
+            # Remove gift card info from session safely
+            request.session.pop('gift_card_code', None)
+            request.session.pop('gift_card_amount', None)
         except GiftCard.DoesNotExist:
             pass
 
