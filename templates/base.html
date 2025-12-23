@@ -67,6 +67,7 @@
                 aria-expanded="false">
                 <div class="text-center">
                   <div><i class="fas fa-user fa-lg"></i></div>
+                  <!-- My account button in nav bar -->
                   <p class="my-0">My Account</p>
               </div>
             </a>
@@ -83,6 +84,16 @@
               {% endif %}
             </div>
             </li>
+            <!-- Wishlist button in nav bar -->
+            <li class="list-inline-item">
+              <a class="text-black nav-link" href="{% url 'view_wishlist' %}">
+                <div class="text-center">
+                  <div><i class="fas fa-heart fa-lg"></i></div>
+                  <p class="my-0">Wishlist</p>
+                </div>
+              </a>
+            </li>
+            <!-- basket button in nav bar -->
             <li class="list-inline-item">
               <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                 <div class="text-center">
