@@ -23,13 +23,14 @@ def view_bag(request):
 
     context = {
         'bag_items': bag_data['bag_items'],
-        'total': bag_data['total'],
+        'total': bag_data['total'],  # total before gift card
         'product_count': bag_data['product_count'],
         'discount': bag_data['discount'],
         'delivery': bag_data['delivery'],
         'free_delivery_delta': bag_data['free_delivery_delta'],
-        'grand_total': grand_total,
-        'gift_card_amount': gift_card_amount,  # Pass gift card to template
+        'grand_total': grand_total,  # after subtracting gift card
+        'gift_card_amount': gift_card_amount,
+        'gift_card_code': request.session.get('gift_card_code', None),
     }
 
     return render(request, 'bag/bag.html', context)
