@@ -10,27 +10,29 @@ from decimal import Decimal
 def view_bag(request):
     """ A view that renders the bag contents page """
 
-    # Get all the bag totals, discounts, delivery, etc
     bag_data = bag_contents(request)
 
-    # Get gift card amount from session (default to 0 if none applied)
-    gift_card_amount = Decimal(request.session.get('gift_card_amount', '0'))
+    total = bag_data['total']
+    discount = bag_data.get('discount', Decimal('0.00'))
+    delivery = bag_data.get('delivery', Decimal('0.00'))
 
-    # Calculate new grand total
-    grand_total = bag_data['grand_total'] - gift_card_amount
-    if grand_total < 0:  # Prevent negative totals
+    gift_card_amount = Decimal(request.session.get('gift_card_amount', 0))
+    gift_card_code = request.session.get('gift_card_code')
+
+    grand_total = total - discount + delivery - gift_card_amount
+    if grand_total < 0:
         grand_total = Decimal('0.00')
 
     context = {
         'bag_items': bag_data['bag_items'],
-        'total': bag_data['total'],  # total before gift card
+        'total': total,
         'product_count': bag_data['product_count'],
-        'discount': bag_data['discount'],
-        'delivery': bag_data['delivery'],
+        'discount': discount,
+        'delivery': delivery,
         'free_delivery_delta': bag_data['free_delivery_delta'],
-        'grand_total': grand_total,  # after subtracting gift card
         'gift_card_amount': gift_card_amount,
-        'gift_card_code': request.session.get('gift_card_code', None),
+        'gift_card_code': gift_card_code,
+        'grand_total': grand_total,
     }
 
     return render(request, 'bag/bag.html', context)

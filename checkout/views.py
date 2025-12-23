@@ -96,29 +96,18 @@ def checkout(request):
             return redirect(reverse('products'))
 
         current_bag = bag_contents(request)
-        total = current_bag['grand_total']
 
-        # Get gift card info from session
-        gift_card_code = request.session.get('gift_card_code', None)
-        gift_card_amount = Decimal(request.session.get('gift_card_amount', 0))
-
-        # Extract the discount separately
+        total = current_bag['total']
         discount = current_bag.get('discount', Decimal('0.00'))
         delivery = current_bag.get('delivery', Decimal('0.00'))
 
-        # Start from total **before discount**
-        order_total = total + discount
+        gift_card_code = request.session.get('gift_card_code')
+        gift_card_amount = Decimal(request.session.get('gift_card_amount', 0))
 
-        # Subtract discount
-        if discount:
-            order_total -= discount
+        grand_total = total - discount + delivery - gift_card_amount
 
-        # Subtract gift card
-        if gift_card_amount:
-            order_total -= gift_card_amount
-
-        # Add delivery
-        grand_total = order_total + delivery
+        if grand_total < 0:
+            grand_total = Decimal('0.00')
 
         # Ensure grand total is never negative
         if grand_total < 0:
