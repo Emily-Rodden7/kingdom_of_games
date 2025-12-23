@@ -1,12 +1,12 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
 from products.models import Product
+from products.models import Wishlist
 
 def view_bag(request):
     """ A view that renders the bag contents page """
 
     return render(request, 'bag/bag.html')
-
 
 def add_to_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
@@ -59,31 +59,37 @@ def adjust_bag(request, item_id):
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
 
-
 def remove_from_bag(request, item_id):
-    """ Remove the item from the shopping bag """
+    bag = request.session.get('bag', {})
 
+    item_id = str(item_id)
+    if item_id in bag:
+        del bag[item_id]
+        request.session['bag'] = bag
+        messages.success(request, "Item removed from your bag.")
+
+    return redirect('view_bag')
+
+def add_wishlist_to_bag(request, item_id):
+    # Get the product by ID
     product = get_object_or_404(Product, pk=item_id)
 
-    try:
-        size = None
-        if 'product_size' in request.POST:
-            size = request.POST['product_size']
-        bag = request.session.get('bag', {})
+    # Add to bag (session)
+    bag = request.session.get('bag', {})
+    product_id = str(product.id)
 
-        if size:
-            del bag[item_id]['items_by_size'][size]
-            if not bag[item_id]['items_by_size']:
-                bag.pop(item_id)
-            messages.success(request, f'Removed size {size.upper()} {product.name} from your bag')
-        else:
-            bag.pop(item_id)
-            messages.success(request, f'Removed {product.name} from your bag')
+    if product_id in bag:
+        bag[product_id] += 1
+    else:
+        bag[product_id] = 1
 
-        request.session['bag'] = bag
-        return HttpResponse(status=200)
-    
-    except Exception as e:
+    request.session['bag'] = bag
 
-        messages.error(request, f'Error removing item: {e}')
-        return HttpResponse(status=500)
+    # Remove from wishlist for this user
+    Wishlist.objects.filter(user=request.user, product=product).delete()
+
+    # Success message
+    messages.success(request, f"{product.name} was added to your bag.")
+
+    # Stay on wishlist page
+    return redirect('view_wishlist')
