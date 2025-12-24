@@ -20,29 +20,51 @@ Accent Color: Gold – representing premium quality and excitement.
 
 ## User Stories
 
-1. Browse Games by Category: As a user,
-- I want to browse games by category (family, kids, 18+),
-- So I can quickly find the type of game I’m interested in.
+Below are user stories for Kingdom Of Games, there is also screenshots on how the user story has been met.
+
+1. Browse Games by cost: As a user,
+- I want to browse games by cost of item,
+- So I can quickly find the cheapest games.
+
+- This user story has been met by having a feature that means you can change the sort by of the games.
+![Browse Games](testing-screenshots/sort-by.png)
 
 2. Search for Specific Games: As a user,
 - I want to search for games by title or keyword,
 - So I can find exactly what I’m looking for without browsing.
 
+- This user story has been met by having a search bar at the top which shows any items that link with what they searched.
+![Search Product](testing-screenshots/search-product.png)
+
 3. As a casual browser,
 - I want to filter games by category (e.g. strategy, children, card games),
 - so that I can find the kind of games I enjoy.
+
+- This user story has been met by having a dropdown navigation bar to be able to pick a category.
+![Dropdown Menu](testing-screenshots/dropdown-menu.png)
 
 4. User Account Management: As a user,
 - I want to register and log in to my account,
 - So I can view order history, save favorites, and manage my personal info.
 
+- This user story has been met when a user has created an account, it gives the option to see order history, change account details or add to wishlist.
+![Order History](testing-screenshots/order-history-profile.png)
+![Wishlist](testing-screenshots/wishlist-page.png)
+
 5. Purchase Games Easily: As a user,
 - I want to add games to a cart and checkout securely,
 - So I can buy games conveniently from home.
 
-6. Checkout and Payment: As a user,
-- I want to securely enter payment and shipping details,
-- So that I can complete my purchase quickly and safely.
+- This user story has been met by having an add to bag button on each product page, which then brings up a pop up in the top right to show the user its been added to their bag, which they can then click on to head to the checkout page.
+![Add to bag](testing-screenshots/addtobag.jpg)
+![Checkout Page](testing-screenshots/checkoutpage.jpg)
+
+6. Leave a review,
+- I want to leave a review for individual products,
+- To help future buyers get an honest opinion on the game.
+
+- This user story has been met by having a review section for each product, the suer has to be signed in to leave a review, but they can change their mind and delete teh review later if they wish to.
+![Leave a review](testing-screenshots/leave-a-review.png)
 
 ## Wireframes
 
@@ -80,6 +102,8 @@ Screenshots of the finished pages.
 
 ![Shopping bag](testing-screenshots/shoppingbagpage.jpg)
 
+![Wishlist](testing-screenshots/wishlist-page.png)
+
 ![checkout](testing-screenshots/checkoutpage.jpg)
 
 ![Ordered](testing-screenshots/orderpage.jpg)
@@ -90,7 +114,7 @@ Screenshots of the finished pages.
 
 - Account creation and login
 
-- Add/remove from wishlist
+- Add/remove from wishlist, as well as adding items from the wishlist to the bag
 
 - Checkout with address form and order summary
 
@@ -98,9 +122,11 @@ Screenshots of the finished pages.
 
 - Edit account details
 
-- Button to take user back to the top of the page
+- Button to take user back to the top of the page. At the bottom right on each page.
 
 - Search bar to search for specific products
+
+- User can leave a review, as well as delete it later on
 
 ## Future Features
 
@@ -203,6 +229,8 @@ Using [Django’s admin panel](https://kingdom-of-games-f3145b6a77c9.herokuapp.c
 - Process or cancel orders
 
 - Manage users: add, edit or delete
+
+- Change user permissions for the site
 
 ## Media & Assets
 
