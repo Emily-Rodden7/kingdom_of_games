@@ -90,7 +90,8 @@ Screenshots of the finished pages.
 
 ![Products](testing-screenshots/productspage.jpg)
 
-![product detail](testing-screenshots/product-detailspage.jpg)
+I have zoomed out to get all the details in the screenshot.
+![product detail](testing-screenshots/product-page.png)
 
 ![Product mamagement](testing-screenshots/productmanagementpage.jpg)
 
@@ -108,7 +109,7 @@ Screenshots of the finished pages.
 
 ![Ordered](testing-screenshots/orderpage.jpg)
 
-![Django admin](testing-screenshots/djangoadmin.jpg)
+![Django admin](testing-screenshots/site-administration.png)
 
 ### User Features
 
@@ -128,6 +129,10 @@ Screenshots of the finished pages.
 
 - User can leave a review, as well as delete it later on
 
+- Can apply gift card to final checkout
+
+- Bundle offer, when 3 or more games have been added to the bag a 5% discount is applied.
+
 ## Future Features
 
 - Game rental service (limited-time play)
@@ -137,8 +142,6 @@ Screenshots of the finished pages.
 - Game night event scheduling
 
 - Loyalty points system
-
-- Gift cards and wishlists for birthdays/holidays
 
 ## Tools & Technologies Used
 
@@ -231,6 +234,10 @@ Using [Django’s admin panel](https://kingdom-of-games-f3145b6a77c9.herokuapp.c
 - Manage users: add, edit or delete
 
 - Change user permissions for the site
+
+- Can delete reviews left by users
+
+- Add gift cards to specific users accounts
 
 ## Media & Assets
 
