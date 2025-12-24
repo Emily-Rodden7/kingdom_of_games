@@ -7,6 +7,7 @@ from django.db.models.functions import Lower
 from .models import Product, Category, Review, Wishlist
 from .forms import ProductForm, ReviewForm
 
+
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
@@ -43,10 +44,10 @@ def all_products(request):
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
-        
+
     current_sorting = f'{sort}_{direction}'
 
     context = {
@@ -63,7 +64,7 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
-    review_form = ReviewForm() 
+    review_form = ReviewForm()
 
     context = {
         'product': product,
@@ -90,6 +91,7 @@ def add_review(request, product_id):
 
     return redirect('product_detail', product_id=product.id)
 
+
 @login_required
 def delete_review(request, review_id):
     review = get_object_or_404(Review, pk=review_id)
@@ -102,6 +104,7 @@ def delete_review(request, review_id):
     review.delete()
     messages.success(request, "Your review has been deleted.")
     return redirect('product_detail', product_id=review.product.id)
+
 
 @login_required
 def add_product(request):
@@ -120,13 +123,14 @@ def add_product(request):
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
     }
 
     return render(request, template, context)
+
 
 @login_required
 def edit_product(request, product_id):
@@ -156,6 +160,7 @@ def edit_product(request, product_id):
 
     return render(request, template, context)
 
+
 @login_required
 def delete_product(request, product_id):
     """ Delete a product from the store """
@@ -168,6 +173,7 @@ def delete_product(request, product_id):
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
 
+
 @login_required
 def add_to_wishlist(request, product_id):
     """Add a product to the user's wishlist"""
@@ -178,15 +184,16 @@ def add_to_wishlist(request, product_id):
         user=request.user,
         product=product
     )
-    
+
     if not created:
         # Product already in wishlist
         messages.info(request, f"{product.name} is already in your wishlist.")
     else:
         messages.success(request, f"{product.name} has been added to your wishlist.")
-    
+
     # Redirect back to the same product page
     return redirect('product_detail', product_id=product.id)
+
 
 @login_required
 def view_wishlist(request):
@@ -195,6 +202,7 @@ def view_wishlist(request):
         'wishlist_items': wishlist_items,
     }
     return render(request, 'products/wishlist.html', context)
+
 
 @login_required
 def remove_from_wishlist(request, item_id):

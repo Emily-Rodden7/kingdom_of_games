@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from bag.contexts import bag_contents
 from decimal import Decimal
 
+
 def view_bag(request):
     """ A view that renders the bag contents page """
 
@@ -37,6 +38,7 @@ def view_bag(request):
 
     return render(request, 'bag/bag.html', context)
 
+
 def add_to_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
 
@@ -55,6 +57,7 @@ def add_to_bag(request, item_id):
 
     request.session['bag'] = bag
     return redirect(redirect_url)
+
 
 def adjust_bag(request, item_id):
     """ Adjust the quantity of the specified product to the specified amount """
@@ -88,6 +91,7 @@ def adjust_bag(request, item_id):
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
 
+
 def remove_from_bag(request, item_id):
     bag = request.session.get('bag', {})
 
@@ -98,6 +102,7 @@ def remove_from_bag(request, item_id):
         messages.success(request, "Item removed from your bag.")
 
     return redirect('view_bag')
+
 
 def add_wishlist_to_bag(request, item_id):
     # Get the product by ID
