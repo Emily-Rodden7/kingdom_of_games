@@ -2,7 +2,7 @@
 
 [Back to README.md file](README.md)
 
-## HTML / CSS
+## HTML / CSS / Python
 
 I have used the recommended [HTML W3C Validator](https://validator.w3.org/) to validate my HTML.
 
@@ -15,6 +15,12 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 | File | Screenshot | Notes |
 | ---- | ---------- | ----- |
 | CSS Screenshot | ![css results](testing-screenshots/css-validator.jpg) | No errors |
+
+I have used the recommended [PEP8](https://pep8ci.herokuapp.com/) to validate my Python.
+
+| Page | Screenshot | Notes |
+| ---- | ---------- | ----- | 
+| PEP8 Screenshot | ![PEP8](testing-screenshots/pep8-testing.png) | I compied my code over to PEP8 testing and had some errors with format, fixed some extra spacing and indents. Also had errors such as line too long or white spacing other specific pages, I fixed these and tested again. |
 
 ## Browser Compatibility
 
@@ -61,3 +67,4 @@ I've tested my deployed project on different screen sizes. I have also tried on 
 | 3 Game Bundle | ![Game Bundle](testing-screenshots/3-game-bundle.png) | Loaded a expected, when 3 or more games have been added to the bag, when the user goes to the checkout a 5% discount is added. |
 | Gift Card | ![Before giftcard](testing-screenshots/before-giftcard.png) ![Giftcard notification](testing-screenshots/giftcard-notification.png) ![Giftcard Applied](testing-screenshots/giftcard-applied.png) | Loaded a expected, when a giftcard code has been entered a pop up apepars in the top left saying its been added and how much for, then when the user goes to checkout it shows the discount has been applied. |
 | Leaving a review | ![Before review](testing-screenshots/review-login.png) ![Review success](testing-screenshots/review-success.png) ![submitted review](testing-screenshots/leave-a-review.png)| Loaded a expected, when the user isn't signed in, it shows you can leave a review but only if you sign in, a link is provided to take the user to sign in. Once signed in the page allows you to right a review on any of the product pages. Once submitted it appears on the screen for anyone to see, the user or admin has the option to delete this review at any time. |
+| Try to access backend when just a standard user | ![admin restrictions](testing-screenshots/admin-restrictions.png) | Loaded a expected, an error comes up not allowing John Doe access to the backend unless he signs in with Admin details, which it does let me try and enter on hat page. |
