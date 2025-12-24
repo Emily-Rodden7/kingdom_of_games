@@ -7,6 +7,7 @@ body {
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
+    padding-top: 20px;
 }
 
 .hero-background {
@@ -17,6 +18,10 @@ body {
   height: 80vh; 
   width: 100%; 
   max-width: 100vw;
+}
+
+.main-content {
+    padding-top: 160px;
 }
 
 /* from Bulma */
